@@ -38,3 +38,4 @@ with open("infra/gbconfig.json", "r") as jj:
     system(comando)
     system('git commit -m "GitBot Commit"')
     system(f'git push -u origin master')
+    print("[bold green]OPERAÇÃO REALIZADA[/bold green]")
