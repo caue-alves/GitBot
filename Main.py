@@ -11,7 +11,7 @@ with open("infra/gbconfig.json", "r") as jj:
             dicio = {"path" : f["path"], "url" : f["url"], "first_time" : "false"}
             json.dump(dicio, jf, indent=4)
             with open('.gitignore', 'w') as git:
-                git.write("/venv/\n/infra")
+                git.write("/venv/\n/infra\n.idea")
 
     system('git add .')
     system('git commit -m "GitBot Commit"')
