@@ -10,6 +10,9 @@ with open("infra/gbconfig.json", "r") as jj:
         with open("infra/gbconfig.json", "w") as jf:
             dicio = {"path" : f["path"], "url" : f["url"], "first_time" : "false"}
             json.dump(dicio, jf, indent=4)
+            with open('.gitignore', 'w') as git:
+                git.write("/venv/\n/infra")
+
     system('git add .')
     system('git commit -m "GitBot Commit"')
     system(f'git push -u origin master')
