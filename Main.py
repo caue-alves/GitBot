@@ -1,6 +1,8 @@
 import json
 from os import system
+from rich import print
 
+input("[bold magenta]Bem vindo ao GitBot!, digite enter para começar[/bold magenta]")
 with open("infra/gbconfig.json", "r") as jj:
     f = json.load(jj)
     system(f'cd {f["path"]}')
