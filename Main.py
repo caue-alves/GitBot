@@ -2,7 +2,8 @@ import json
 from os import system
 from rich import print
 
-print("[green]Bem vindo ao GitBot!, digite enter para começar[/green]")
+print("[green]Bem vindo ao GitBot!, digite enter para começar[/green] :robot")
+
 with open("infra/gbconfig.json", "r") as jj:
     f = json.load(jj)
     system(f'cd {f["path"]}')
